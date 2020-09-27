@@ -1,0 +1,70 @@
+openapi: 3.0.0
+
+info:
+  title: 'Customer Controller entities'
+  description: 'Customer Controller Model Specification'
+  version: 1.0.0
+  contact:
+    name: Andrii Kybenko
+    url: https://www.linkedin.com/in/andrii-kybenko/
+
+servers:
+  - url: http://localhost:8080
+    description: 'localhost'
+
+paths: {}
+
+components:
+  schemas:
+    AddressDto:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: '4b7eb488-ceb3-4eda-9443-1b953418bff3'
+          readOnly: true
+        zipCode:
+          type: string
+          example: '96522'
+        state:
+          type: string
+          example: 'Mississippi'
+        city:
+          type: string
+          example: 'Mankato'
+        street:
+          type: string
+          example: '711-2880 Nulla St.'
+      required:
+        - id
+        - zipCode
+        - state
+        - city
+        - street
+
+    CustomerDto:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: '90d86dc7-083b-467d-b93a-f638f2d77caa'
+          readOnly: true
+        name:
+          type: string
+          example: "Cecilia Chapman"
+        description:
+          type: string
+          example: 'Test customer'
+        email:
+          type: string
+          format: email
+          example: "cchapman@example.com"
+        address:
+          $ref: '#/components/schemas/AddressDto'
+      required:
+        - id
+        - name
+        - email
+        - address

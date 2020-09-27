@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="U_CUSTOMER(NAME)" author="akybenko">
+        <addUniqueConstraint tableName="CUSTOMER" columnNames="NAME" constraintName="U_CUSTOMER(NAME)"/>
+    </changeSet>
+    <changeSet id="U_CUSTOMER(EMAIL)" author="akybenko">
+        <addUniqueConstraint tableName="CUSTOMER" columnNames="EMAIL" constraintName="U_CUSTOMER(EMAIL)"/>
+    </changeSet>
+    <changeSet id="U_CUSTOMER(ADDRESS_ID)" author="akybenko">
+        <addUniqueConstraint tableName="CUSTOMER" columnNames="ADDRESS_ID" constraintName="U_CUSTOMER(ADDRESS_ID)"/>
+    </changeSet>
+    <changeSet id="FK_CUSTOMER(ADDRESS_ID)-ADDRESS(ID)" author="akybenko">
+        <addForeignKeyConstraint baseTableName="CUSTOMER"
+                                 baseColumnNames="ADDRESS_ID"
+                                 referencedTableName="ADDRESS"
+                                 referencedColumnNames="ID"
+                                 constraintName="FK_CUSTOMER(ADDRESS_ID)-ADDRESS(ID)"/>
+    </changeSet>
+</databaseChangeLog>

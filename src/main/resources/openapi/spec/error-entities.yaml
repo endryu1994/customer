@@ -1,0 +1,41 @@
+openapi: 3.0.0
+
+info:
+  title: 'Error entities'
+  description: 'Error Model Specification'
+  version: 1.0.0
+  contact:
+    name: Andrii Kybenko
+    url: https://www.linkedin.com/in/andrii-kybenko/
+
+servers:
+  - url: http://localhost:8080
+    description: 'localhost'
+
+paths: {}
+
+components:
+  schemas:
+    SingleErrorResponse:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          example: "2020-09-26T09:02:51.157+00:00"
+        status:
+          type: integer
+          description: 'error code'
+          example: '404'
+        error:
+          type: string
+          description: 'error reason'
+          example: 'Not Found'
+        path:
+          type: string
+          description: 'servlet path'
+          example: '/api/v1/customer'
+        message:
+          type: string
+          description: 'error message'
+          example: 'Failed to found entity with id: 90d86dc7-083b-467d-b93a-f638f2d77cab'

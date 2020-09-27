@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="INSERT ADDRESS" author="akybenko">
+        <insert tableName="ADDRESS">
+            <column name="ID" value="4b7eb488-ceb3-4eda-9443-1b953418bff3"/>
+            <column name="ZIP_CODE" value="96522"/>
+            <column name="STATE" value="Mississippi"/>
+            <column name="CITY" value="Mankato"/>
+            <column name="STREET" value="711-2880 Nulla St."/>
+        </insert>
+    </changeSet>
+    <changeSet id="INSERT CUSTOMER" author="akybenko">
+        <insert tableName="CUSTOMER">
+            <column name="ID" value="90d86dc7-083b-467d-b93a-f638f2d77caa"/>
+            <column name="NAME" value="Cecilia Chapman"/>
+            <column name="DESCRIPTION" value="Test customer"/>
+            <column name="EMAIL" value="cchapman@example.com"/>
+            <column name="ADDRESS_ID" value="4b7eb488-ceb3-4eda-9443-1b953418bff3"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
