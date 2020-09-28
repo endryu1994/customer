@@ -20,6 +20,7 @@
         <openapi-generator-maven-plugin.version>4.3.1</openapi-generator-maven-plugin.version>
         <springfox-swagger2.version>3.0.0</springfox-swagger2.version>
         <jackson-databind-nullable.version>0.2.1</jackson-databind-nullable.version>
+        <keycloak.version>4.0.0.Final</keycloak.version><keycloak-spring-boot-2-starter.version>4.0.0.Final</keycloak-spring-boot-2-starter.version>
     </properties>
 
     <dependencies>
@@ -44,6 +45,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -93,6 +98,11 @@
             <groupId>org.openapitools</groupId>
             <artifactId>jackson-databind-nullable</artifactId>
             <version>${jackson-databind-nullable.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-boot-2-starter</artifactId>
+            <version>${keycloak.version}</version>
         </dependency>
     </dependencies>
 

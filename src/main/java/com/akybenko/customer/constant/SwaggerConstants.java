@@ -13,4 +13,8 @@ public interface SwaggerConstants {
     String CONTACT_NAME = "Andrii Kybenko";
     String CONTACT_URL = "https://www.linkedin.com/in/andrii-kybenko/";
     String CONTACT_EMAIL = "endryukibenko@gmail.com";
+
+    String HEADER = "header";
+    String AUTHORIZATION_SCOPE = "global";
+    String AUTHORIZATION_DESCRIPTION = "forAnyEndpoint";
 }
